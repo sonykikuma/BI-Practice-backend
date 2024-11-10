@@ -7,6 +7,7 @@ const fruitSchema = new mongoose.Schema(
     },
     color: String,
     rate: String,
+    photo: String,
     category: [
       {
         type: String,
