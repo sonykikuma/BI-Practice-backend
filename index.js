@@ -45,10 +45,10 @@ app.get("/fruits", async (req, res) => {
 
 //add fruits
 app.post("/fruits", async (req, res) => {
-  const { name, color, rate, category } = req.body;
+  const { name, color, rate, category, photo } = req.body;
 
   try {
-    const newFruit = new Fruit({ name, color, rate, category });
+    const newFruit = new Fruit({ name, color, rate, category, photo });
     await newFruit.save();
     res.status(201).json(newFruit);
   } catch (error) {
